@@ -1,0 +1,253 @@
+/**
+ *
+ * Blue and Green Style Scheme
+ */
+
+/* Font Declarations */
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 400;
+  src: local("☺"),
+    url("fonts/Alegreya-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 700;
+  src: local("☺"),
+    url("fonts/Alegreya-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 400;
+  src: local("☺"),
+    url("fonts/Alegreya-Italic.ttf") format("truetype");
+}
+
+/* Debug style so you know its working. */
+body {
+    background: #edece7;
+    /* Mozilla Firefox: */
+    background: -moz-linear-gradient(top, #8a8b8c, #CCC);
+    /* Chrome and Safari:*/
+    background: -webkit-gradient(linear,
+                left top, left bottom, from(#8a8b8c), to(#CCC));
+    /* Microsoft Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.Gradient(
+                StartColorStr='#8a8b8c', EndColorStr='#CCC', GradientType=0);
+	  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;			
+}
+
+#page{
+    background: #fff;
+    font-size: 1em;
+    line-height: 1.3em;
+    color: #000;
+    border: 0px solid #CCC;
+    border-top-width: 6px;
+    border-top-style: solid;
+    border-top-color: #537672;
+    -moz-box-shadow: 5px 5px 5px #666;
+    -webkit-box-shadow: 5px 5px 5px #666;
+    box-shadow: 5px 5px 5px #666;
+    border-radius: 0px 0px 4px 4px;
+    opacity: 0.96;
+    -moz-opacity: 0.96;
+    filter: alpha(opacity=96);
+    font-family: 'Alegreya', sans-serif;   
+}
+
+/* link color and behavior */
+a { 
+color: #537672; 
+text-decoration: none;
+font-weight:bold;
+}
+a:visited {
+	text-decoration: none;
+	color: #537672;
+}	
+a:hover {
+	text-decoration: underline;
+	color: #990033;
+}	
+a:active {
+	text-decoration: none;
+	color:#903;
+}		
+
+#site-name{
+    	font-size: 1.8em;
+	line-height: 1em;
+        font-weight: bold;
+        margin-bottom: 3%;
+}
+
+#site-name a{
+	color: #537672;
+}
+
+#site-name a:hover {
+	color: #A31F34;
+}
+		
+#site-slogan {
+	color: #537672;
+	font-size: 1.2em;
+	line-height: 1em;
+}	
+
+
+h1 {
+	font-size: 1.3em;
+	color: #537672;
+	font-weight:bold;
+        margin-bottom: 2%;
+}
+
+h2 {
+	font-size: 1.15em;
+	color: #537672;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1em;
+	color: #537672;
+	font-weight: bold;
+}
+
+blockquote {
+	font-size:1.2em;
+	line-height:1.3em;
+	color: #8A8B8C;
+        font-style: normal;
+        margin: 0 0 1em;
+        padding: 0;
+}	
+
+footer {
+	color:#666;
+	font-size: .9em;
+	line-height: 1.165em;
+}
+
+#mit-footer-logo{
+    margin-top: 0;
+}
+
+#primary-menu-bar,
+#secondary-menu-bar,
+#menu-bar nav.block-menu{
+	font-size: .9em;
+}
+
+#secondary-menu-bar .menu a,
+#menu-bar nav.block-menu .menu a{
+	color: #8A8B8C;
+}
+        
+#secondary-menu-bar .menu a:hover,
+#menu-bar nav.block-menu .menu a:hover{
+	text-decoration:none;
+	color: #537672;
+}
+
+#primary-menu-bar, 
+#menu-bar #block-system-main-menu.block-menu .menu-wrapper{
+	background-color:#537672;
+}
+
+#primary-menu-bar nav .menu a, 
+#menu-bar #block-system-main-menu.block-menu .menu a{
+color:#fff;
+text-decoration:none;
+}
+
+#primary-menu-bar nav .menu a:hover, 
+#primary-menu-bar nav .menu li:hover > a,
+#menu-bar #block-system-main-menu.block-menu .menu a:hover,
+#menu-bar #block-system-main-menu.block-menu .menu li:hover > a,
+#primary-menu-bar nav .menu a.active-trail,
+#menu-bar #block-system-main-menu.block-menu .menu li.active-trail > a{
+background-color:#CCC;
+text-decoration:none;
+color:#537672;
+}
+
+#primary-menu-bar nav .menu a.active, 
+#menu-bar #block-system-main-menu.block-menu .menu a.active {
+background-color:#CCC;
+color:#537672;
+}
+
+#primary-menu-bar nav .menu a:visited, 
+#menu-bar #block-system-main-menu.block-menu .menu a:visisted {
+color:#000;
+}
+
+#primary-menu-bar nav .menu .menu,
+#menu-bar #block-system-main-menu.block-menu .menu .menu{
+background-color:#537672;
+-moz-box-shadow: 3px 4px 6px #666;
+  -webkit-box-shadow: 3px 4px 6px #666;
+	box-shadow: 3px 4px 6px #666;
+}
+
+/* Responsive Menus Module */
+
+/* Responsive Menus Plain */
+.responsive-menus.responsified span.toggler,
+.responsive-menus.responsified .responsive-menus-simple li a{
+    background-color: #537672;
+    color: #FFF;
+}
+
+.responsive-menus.responsified .responsive-menus-simple li a:hover{
+    background-color: #CCC;
+    color: #537672;
+}
+
+/* Mean Bar */
+
+.mean-container .mean-bar,
+.mean-container .mean-nav ul li a{
+    background-color: #537672;
+    color: #FFF;   
+}
+
+.mean-container .mean-bar ul li a:hover,
+.mean-container .mean-nav ul li a.mean-expand:hover
+{
+    background: #ccc;
+    color: #537672;
+}
+
+
+/* DL Menu */
+
+.dl-menuwrapper button{
+    background-color: #537672;
+    color: #FFF;      
+}
+
+.dl-menuwrapper button:hover, 
+.dl-menuwrapper button.dl-active, 
+.dl-menuwrapper ul{
+    background-color: #537672;
+    color: #FFF;    
+}
+
+/* Sidr */
+
+#sidr-wrapper-0 a{
+    background-color: #537672;
+    color: #FFF;        
+}

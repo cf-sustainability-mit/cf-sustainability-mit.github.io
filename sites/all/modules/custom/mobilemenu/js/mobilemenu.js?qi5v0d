@@ -1,0 +1,251 @@
+/**
+ * @file
+ * Attaches the behaviors for the Mobilemenu module.
+ */
+
+(function($) {
+
+Drupal.behaviors.mobilemenu = {
+  attach: function(context, settings) {
+
+    var activeTheme = Drupal.settings.mobilemenu.regions;
+
+    if(activeTheme == 'mit_admin' || activeTheme == 'mit_adaptive') {
+      // Initial run on page load
+      doMobileMenu();
+
+      // Listen in on the resize 
+      $(window).resize(function() {
+        doMobileMenu();
+      });
+    }
+
+    // Primary function runs 
+    function doMobileMenu() {
+
+      var size = document.documentElement.clientWidth;
+
+      // Check our size against the configured size
+      if(size < Drupal.settings.mobilemenu.trigger_size) {
+
+        // We only have to populate the mobilemenu once
+        if($('#mobilemenu').length == 0) {
+          makeMobileMenu();
+        }  
+      }
+
+      // We're no longer meeting the size criteria, reset it to normal
+      else {
+        if($('#mobilemenu').length > 0) {
+          undoMobileMenu();
+        }  
+      }
+    }
+
+    // Function runs once we've reached our trigger size
+    function makeMobileMenu() {
+
+      var menuOne = Drupal.settings.mobilemenu.menu_primary;
+      var menuTwo = Drupal.settings.mobilemenu.menu_secondary;
+
+      var menuOneLabel = Drupal.settings.mobilemenu.label_primary;
+      var menuTwoLabel = Drupal.settings.mobilemenu.label_secondary;
+       
+      var orientation = Drupal.settings.mobilemenu.orientation;
+      
+      var buttonDisplay = 'mobilemenu-' + orientation;
+      
+      if (menuOne.length || menuTwo.length) {
+
+        // Declare some html to hold the glory   
+        var menuContainer = '<div id="mobilemenu" class="' + buttonDisplay + '" />';
+
+        // Create a placeholder for the default mobilemenu parent, buttons and menus location
+        switch(activeTheme) {
+          case 'mit_admin':
+            $('#menu-bar').append(menuContainer);  
+          break;
+          case 'mit_adaptive':
+            $('#header-wrapper header').append(menuContainer);
+          break;
+        }
+
+        // When displaying inline, we're going to group the buttons together
+        if (orientation == 'inline') {
+          $('#mobilemenu').append('<ul id="mobilemenu-buttons" />');
+        }
+
+        // Only process if we have something to process
+        if (typeof(menuOne) != 'undefined') {
+          if ((menuOne).length > 0) {
+            makeMobileMenuProcess(menuOne, menuOneLabel, orientation);
+          }
+        }
+
+        // Only process if we have something to process
+        if (typeof(menuTwo) != 'undefined') {
+          if ((menuTwo).length > 0) {
+            makeMobileMenuProcess(menuTwo, menuTwoLabel, orientation);
+          }
+        }
+
+        // Classify depending on how many menus we made
+        var menuCount = $('.mobilemenu-menu').length;
+        switch(menuCount) {
+          case 1:
+            $('#mobilemenu').addClass('single');
+          break;
+          case 2:
+            $('#mobilemenu').addClass('double');
+          break;
+        }
+            
+        // If this is created but no buttons are inserted, we should remove it
+        if ($('#mobilemenu-buttons').length < 1) {
+          $('#mobilemenu-buttons').remove();
+        }
+
+        // If there's buttons, they may or may not be grouped together, so we address directly
+        $('.mobilemenu-button-toggle:first').addClass('first');
+        $('.mobilemenu-button-toggle:last').addClass('last');
+
+        // Wrapping the contents assists us with CSS styling
+        $('#mobilemenu').wrapInner('<div class="container clearfix" />');
+      }
+    }
+
+    // Function runs when we have a specific menu to move
+    function makeMobileMenuProcess(id, label, orientation) {
+
+      // An assumption is made that all menus will be encapsulated in <nav>
+      // An assumption is made that the unique id will have a varying prefix but will end with the menu id
+      var menuId = $("nav[id$=" + id + "]").attr('id');
+
+      // That first assumption is wrong in the case of menu blocks
+      if (typeof(menuId) == 'undefined' && id.match("^menu-block-")) {
+        var menuId = $("[id$=" + id + "]").attr('id');
+      }
+
+      // What. No menu? Whatever.
+      if (typeof(menuId) == 'undefined') {
+        return false;
+      }
+
+      // If we have a menu, but they neglected a label, give a default label
+      var menuLabel = (label.length > 0) ? label : Drupal.t('Menu');
+
+      // Claim the button territory, which is based upon orientation
+      switch(orientation) {
+        case 'inline':
+          $('#mobilemenu-buttons').append('<li id="mobilemenu-button-' + id + '" class="mobilemenu-button" />');
+          break;
+        case 'block':
+          $('#mobilemenu').append('<div id="mobilemenu-button-' + id + '" class="mobilemenu-button" />');
+          break;
+        default:
+          $('#mobilemenu').append('<div id="mobilemenu-button-' + id + '" class="mobilemenu-button" />');
+          break;
+      }
+
+      // Insert the button, doing in stages for readability
+      $('#mobilemenu-button-' + id).append('<a id="mobilemenu-button-' + id + '-toggle">' + menuLabel + '</a>');
+      $('#mobilemenu-button-' + id + '-toggle').attr('href', '#');
+      $('#mobilemenu-button-' + id + '-toggle').attr('title', menuLabel);
+      $('#mobilemenu-button-' + id + '-toggle').addClass('mobilemenu-button-toggle');
+
+      // Create a placeholder for the menu so we can move it back
+      $('#' + menuId).before('<div id="' + menuId + '-default" />');
+
+      // Move the menu
+      // Note that append doesn't copy and paste, but instead cuts then pastes
+      $('#mobilemenu').append($('#' + menuId));
+
+      // Contain the menu
+      $('#' + menuId).wrap('<div id="mobilemenu-menu-' + menuId + '-wrapper" class="mobilemenu-menu" />');
+
+      // Hide the menu's title if present
+      // We do not need to check default visibility first
+      $('#' + menuId + ' .block-title').hide();
+
+      // Hide (collapse) the menu by default
+      $('#' + menuId).hide();
+
+      // Plugin the buttons
+      $('#mobilemenu-button-' + id + '-toggle').click(function() {
+
+        // When we click, we want to toggle between show and hide in synch with specifying active class marker
+        $('#' + menuId).toggle();
+        $(this).toggleClass('active');
+
+        // Hide all other menus
+        $('#mobilemenu .block').each(function () {
+          if (this.id != menuId) {
+            $(this).hide();
+          }
+        });
+
+        // Remove active class from other buttons
+        $('#mobilemenu .mobilemenu-button-toggle').each(function () {
+          if (this.id != 'mobilemenu-button-' + id + '-toggle') {
+            $(this).removeClass('active');
+          }
+        });
+
+        // Halt any further click directives
+        return false;
+      });
+    }
+
+    // Function runs once we no longer meet our trigger size
+    function undoMobileMenu() {
+
+      var menuOne = Drupal.settings.mobilemenu.menu_primary;
+      var menuTwo = Drupal.settings.mobilemenu.menu_secondary;
+
+      // Only process if we have something to process
+      if (typeof(menuOne) != 'undefined') {
+        if ((menuOne).length > 0) {
+          undoMobileMenuProcess(menuOne);
+        }
+      }
+
+      // Only process if we have something to process
+      if (typeof(menuTwo) != 'undefined') {
+        if ((menuTwo).length > 0) {
+          undoMobileMenuProcess(menuTwo);
+        }
+      }
+      
+      // Clean House
+      $('#mobilemenu').remove();
+    }
+    
+    // Function runs when we have a specific menu to move back to original position
+    function undoMobileMenuProcess(id) {
+
+      // An assumption is made that all menus will be encapsulated in <nav>
+      // An assumption is made that the unique id will have a varying prefix but will end with the menu id
+      var menuId = $("nav[id$=" + id + "]").attr('id');
+
+      // That first assumption is wrong in the case of menu blocks
+      if (typeof(menuId) == 'undefined' && id.match("^menu-block-")) {
+        var menuId = $("section[id$=" + id + "]").attr('id');
+      }
+
+      // Replace our entire placeholder with our menu
+      // Note that replaceWith doesn't copy and paste, but instead cuts then pastes
+      $('#' + menuId + '-default').replaceWith($('#' + menuId));
+
+      // Retore the menu's title
+      // We do not need to check default visibility first
+      $('#' + menuId + ' .block-title').show();
+
+      // Redisplay the menu by default
+      $('#' + menuId).show();
+    }
+  }
+};
+
+})(jQuery);
+
+// EOF

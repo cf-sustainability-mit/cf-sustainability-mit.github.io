@@ -1,0 +1,51 @@
+/**
+ * @file Plugin for CloudStatus javascript routines
+ */
+(function($) {
+
+Drupal.settings.cloudstatus = {
+  formPath: '/ajax/cloudstatus-alert',
+  blockEle: '#block-cloudstatus-alert',
+};
+
+Drupal.behaviors.cloudstatus = {
+  attach: function (context, settings) {
+
+    // Let the page load first
+    $(document).ready(function() {
+
+      // Check that container exists and it is empty
+      if ($('.cloudstatus-container').length && !($('.cloudstatus-container').html().length)) {
+      
+        // If it's already processed, do not repeat
+        if (!($('.cloudstatus-container').hasClass('cloudstatus-container-processed'))) {
+
+          // Isolate the local path of where we are
+          var pagePath = window.location.pathname.replace(new RegExp("^" + Drupal.settings.basePath), '');
+
+          // Fetch the data and communicate where to come back to
+          $('.cloudstatus-container').load(settings.cloudstatus.formPath + '?destination=' + pagePath, function(response, status, xhr) {
+
+            // If data is returned, mark the element
+            if (status == 'success' && response.trim().length) {
+              $('.cloudstatus-container').addClass('cloudstatus-container-processed');
+            }
+            // Otherwise, remove the entire block element
+            else {
+              $(settings.cloudstatus.blockEle).remove();
+            }
+
+          });
+        }
+      }
+
+      // If we're missing our expected content, remove the block
+      if ($('.cloudstatus-container form').length && !($('.cloudstatus-container form').html().length)) {
+        $(settings.cloudstatus.blockEle).remove();
+      }
+
+    });
+  }
+};
+
+})(jQuery);

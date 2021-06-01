@@ -1,0 +1,86 @@
+/**
+ * Use this file to conditionally override styles for devices.
+ * If you adjust the media queries in the theme settings you should
+ * adjust them here so they match.
+ */
+
+/* Smartphone portrait */
+@media only screen and (max-width:320px) {
+    #mit-header-logo{
+        float: left;
+        clear: both;
+        margin: 5% 0;
+    }
+    .region-header{
+        float: left;
+        clear: both;
+        margin: 0% 0 5%;
+        padding-left: 0;
+    }
+    #secondary-menu-bar, #menu-bar nav.block-menu{
+        margin-top: 2%;
+        margin-bottom: 4%;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+    }
+    #secondary-menu-bar .secondary-menu, #menu-bar nav.block-menu .menu{
+        float: none;
+    }
+}
+
+/* Smartphone landscape */
+@media only screen and (min-width:321px) and (max-width:480px) {
+    #secondary-menu-bar, #menu-bar nav.block-menu{
+        margin-top: 2%;
+        margin-bottom: 4%;
+    }
+    .region-header{
+        float: left;
+        margin: 2% 0 5%;
+        padding-left: 0;
+    }
+    footer{
+        font-size: .9em;
+    }
+}
+
+/* Tablet portrait */
+@media only screen and (min-width:481px) and (max-width:768px) {
+    #mit-header-logo{
+        clear: both;
+        margin-top: 2%;
+    }
+    .region-header{
+        float: left;
+        margin: 2% 0 5%;
+        padding-left: 0;
+    }
+}
+
+/* Tablet landscape */
+@media only screen and (min-width:769px) and (max-width:1024px) {
+    .two-sidebars .content-inner{
+        padding: 0 5%;
+    }
+    .sidebar-second .content-inner{
+        padding-right: 5%;
+    }
+    .sidebar-first .content-inner{
+        padding-left: 5%;
+    }
+}
+
+/* Standard layout */
+@media only screen and (min-width:1025px) {
+    .two-sidebars .content-inner{
+        padding: 0 5%;
+    }
+    .sidebar-second .content-inner{
+        padding-right: 5%;
+    }
+    .sidebar-first .content-inner{
+        padding-left: 5%;
+    }
+}
+

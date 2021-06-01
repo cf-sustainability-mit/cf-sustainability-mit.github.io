@@ -1,0 +1,198 @@
+/* AT Default Overrides */
+.block-inner, .region-help, .messages, #primary-nav, #secondary-nav, #breadcrumb, #main-content > header, #branding, #attribution{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Page */
+
+#page{
+    border: 2px solid #CCC;
+    padding-top: 1.9%;
+    padding-bottom: 1.9%;
+    background: #FFFFFF;
+}
+
+.add-gutter,
+#breadcrumb{
+    margin-left: 3.1%;
+    margin-right: 3.1%;
+}
+
+/* Header */
+#page > header {}
+#logo {
+  float: left;
+  margin-top: 1%;
+  margin-right: 2.5%;
+}
+#page > header > hgroup {
+  float: left;
+}
+#site-name {
+    font-weight: normal;
+    font-size: 1.6em;
+    margin-bottom: 0;
+}
+#site-name a    {}
+#site-name a:visited {}
+#site-name a:hover   {}
+#site-name a:focus   {}
+#site-name a:active  {}
+#site-slogan {
+    font-weight: normal;
+    font-size: 1.4em;
+    margin-bottom: 0;
+}
+
+#mit-header-logo{
+    float: right;
+    margin-top: 5px;
+    margin-left: 3%;
+    margin-right: 1%;
+    padding-bottom: 1%;
+}
+
+.mit-logo{
+    width: 56px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.mit-logo a{
+}
+
+.mit-text{
+    max-width: 274px;
+}
+
+#mit-footer-logo img{
+    left: -168px;
+}
+
+#mit-footer-logo a:hover img,
+.mit-logo a:hover img{
+    left: -56px;
+}
+
+.mit-logo img{
+    position: relative;
+    max-width: inherit;
+}
+
+/* Page title */
+h1#page-title {}
+
+/* Regions */
+.region-leaderboard {}
+.region-header {
+    float: right;
+    padding-left: 3.5%;
+    padding-right: 1.5%;
+}
+.region-secondary-content {}
+.region-highlighted {}
+.region-content-aside {}
+.region-tertiary-content {}
+.region-footer {}
+
+/* Sidebars */
+.sidebar {
+    font-size: .9em;
+}
+.region-sidebar-first {}
+.region-sidebar-second {}
+
+/* Footer - the main page footer only */
+#page > footer {
+    border-top: 1px solid #CCC;
+    margin-top: 1%;
+    padding-top: 2%;
+    overflow: hidden;
+}
+
+#page .region-footer{
+    clear: none;
+    float: left;
+}
+
+#page .region-footer p{
+    margin-bottom: .3em;
+}
+
+#page .region-footer .block{
+    float: left;
+}
+
+#mit-footer{
+    float: left;
+    width: 350px;
+    margin-right: 36px;
+}
+
+#mit-footer-logo{
+    float: left;
+    margin-right: 20px;
+    margin-top: 4px;
+}
+
+#mit-footer-text{
+    float: left;
+}
+
+/* Feed icons */
+#feed-icons {}
+#feed-icons .feed-icon {}
+#feed-icons .feed-icon img {}
+#feed-icons a.feed-icon {}
+
+/* Search results list. */
+.search-results {}
+.search-results .search-result {}
+.search-results .title {}
+.search-results .search-snippet-info {}
+.search-results p {}
+.search-results .search-snippet {}
+.search-results .search-info {}
+
+span.search-info-type {}
+span.search-info-user {}
+span.search-info-date {}
+span.search-info-comment {}
+span.search-info-upload  {}
+
+/* Aggregator */
+.feed-item {}
+.feed-item header {}
+.feed-item-title {}
+.feed-item-meta {}
+.feed-item .content {}
+.feed-item footer {}
+.feed-source {}
+.feed-description {}
+
+/* Maintenance page */
+.maintenance-page #skip-link {
+  position: absolute;
+  top: -99em;
+}
+.maintenance-page footer {
+  margin: 10px 0 0;
+}
+.maintenance-page footer a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+/* Prevent overflowing content */
+header[role=banner],
+.content-inner,
+.nav,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-secondary-content,
+.region-tertiary-content,
+.region-footer {
+  overflow: visible;
+  word-wrap: break-word;
+}
