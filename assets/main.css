@@ -1,4 +1,7 @@
 
+
+/*General css file*/
+
 .navbar ul {
   list-style-type: none;
   margin: 0;
@@ -37,7 +40,222 @@
 #title {
   text-align: center;
   color: black;
-  font-size: 2.7vw;
-  height:2.1em;
+  font-size: 2em;
   display: flex;
+  line-height: 1.4em;
+}
+
+
+
+
+/* Page */
+
+#page{
+    border: 2px solid #CCC;
+    padding-top: 1.9%;
+    padding-bottom: 1.9%;
+    background: #FFFFFF;
+}
+
+.add-gutter,
+#breadcrumb{
+    margin-left: 3.1%;
+    margin-right: 3.1%;
+}
+
+
+/* Layout */
+
+/* Provide a backup layout for browsers that do not support media queries */
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 960px;
+}
+.two-sidebars .content-inner {
+  margin: 0 180px;
+}
+.sidebar-first .content-inner {
+  margin-left: 180px;
+}
+.sidebar-second .content-inner {
+  margin-right: 180px;
+}
+.region-sidebar-first {
+  width: 180px;
+  margin-left: -100%;
+}
+.region-sidebar-second {
+  width: 180px;
+  margin-left: -180px;
+}
+ 
+/* Add gutters */
+.block-inner,
+.region-help,
+.messages,
+#primary-nav,
+#secondary-nav,
+#breadcrumb,
+#main-content > header,
+#branding,
+#attribution {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Compass clearfix */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+
+
+
+
+/**
+ *
+ * Blue and Green Style Scheme
+ */
+
+/* Debug style so you know its working. */
+body {
+    background: #edece7;
+    /* Mozilla Firefox: */
+    background: -moz-linear-gradient(top, #8a8b8c, #CCC);
+    /* Chrome and Safari:*/
+    background: -webkit-gradient(linear,
+                left top, left bottom, from(#8a8b8c), to(#CCC));
+    /* Microsoft Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.Gradient(
+                StartColorStr='#8a8b8c', EndColorStr='#CCC', GradientType=0);
+    background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;     
+}
+
+#page{
+    background: #fff;
+    font-size: 1em;
+    line-height: 1.3em;
+    color: #000;
+    border: 0px solid #CCC;
+    border-top-width: 6px;
+    border-top-style: solid;
+    border-top-color: #537672;
+    -moz-box-shadow: 5px 5px 5px #666;
+    -webkit-box-shadow: 5px 5px 5px #666;
+    box-shadow: 5px 5px 5px #666;
+    border-radius: 0px 0px 4px 4px;
+    opacity: 0.96;
+    -moz-opacity: 0.96;
+    filter: alpha(opacity=96);
+    font-family: 'Alegreya', sans-serif;   
+}
+
+/* link color and behavior */
+a { 
+color: #537672; 
+text-decoration: none;
+font-weight:bold;
+}
+a:visited {
+  text-decoration: none;
+  color: #537672;
+} 
+a:hover {
+  text-decoration: underline;
+  color: #990033;
+} 
+a:active {
+  text-decoration: none;
+  color:#903;
+}   
+
+
+
+h1 {
+  font-size: 1.5em;
+  color: #537672;
+  font-weight:bold;
+        /*margin-bottom: 2%;*/
+}
+
+h2 {
+  font-size: 1.2em;
+  color: #537672;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1em;
+  color: #537672;
+  font-weight: bold;
+}
+
+
+img {
+  max-width: 100%; /* flexible images - can cause issues in table cells where no width is set on the column, only in webkit and IE 7/8 */
+  height: auto;
+}
+
+
+
+
+
+
+
+
+/* Smartphone portrait one-col-stack */
+@media only screen and (max-width:320px) {
+.two-sidebars .content-inner,.one-sidebar .content-inner,.region-sidebar-first,.region-sidebar-second {margin-left: 0; margin-right: 0;}
+.region-sidebar-first, .region-sidebar-second, .region-sidebar-first .block, .region-sidebar-second .block {width: 100%;}
+.region-sidebar-second {width: 100%;}
+.content-inner,.region-sidebar-first,.region-sidebar-second {float: none;}
+.region-sidebar-first, .region-sidebar-second {clear: both;}
+.container {width: 100%;}
+}
+/* Smartphone landscape one-col-vert */
+@media only screen and (min-width:321px) and (max-width:480px) {
+.two-sidebars .content-inner,.one-sidebar .content-inner,.region-sidebar-first,.region-sidebar-second {margin-left: 0; margin-right: 0;}
+.region-sidebar-first {width: 50%;}
+.region-sidebar-second {width: 50%;}
+.one-sidebar .sidebar {width: 100%;}
+.region-sidebar-first, .region-sidebar-second {overflow: hidden; margin-top: 20px;}
+.region-sidebar-first .block, .region-sidebar-second .block {width: 100%;}
+.container {width: 100%;}
+}
+/* Tablet portrait one-col-vert */
+@media only screen and (min-width:481px) and (max-width:768px) {
+.two-sidebars .content-inner,.one-sidebar .content-inner,.region-sidebar-first,.region-sidebar-second {margin-left: 0; margin-right: 0;}
+.region-sidebar-first {width: 50%;}
+.region-sidebar-second {width: 50%;}
+.one-sidebar .sidebar {width: 100%;}
+.region-sidebar-first, .region-sidebar-second {overflow: hidden; margin-top: 20px;}
+.region-sidebar-first .block, .region-sidebar-second .block {width: 100%;}
+.container {width: 100%;}
+}
+/* Tablet landscape three-col-grail */
+@media only screen and (min-width:769px) and (max-width:1024px) {
+.two-sidebars .content-inner {margin-left: 15%; margin-right: 20%;}
+.sidebar-first .content-inner {margin-left: 15%; margin-right: 0;}
+.sidebar-second .content-inner {margin-right: 20%; margin-left: 0;}
+.region-sidebar-first {width: 15%; margin-left: -100%;}
+.region-sidebar-second {width: 20%; margin-left: -20%; clear: none;}
+.container {width: 100%;}
+}
+/* Standard layout three-col-grail */
+@media only screen and (min-width:1025px) {
+.two-sidebars .content-inner {margin-left: 15%; margin-right: 20%;}
+.sidebar-first .content-inner {margin-left: 15%; margin-right: 0;}
+.sidebar-second .content-inner {margin-right: 20%; margin-left: 0;}
+.region-sidebar-first {width: 15%; margin-left: -100%;}
+.region-sidebar-second {width: 20%; margin-left: -20%; clear: none;}
+.container {width: 100%; max-width: 1130px;}
 }
