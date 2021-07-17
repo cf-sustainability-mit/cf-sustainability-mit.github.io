@@ -66,55 +66,52 @@
           </div>
         </div>
 
-        <div style="float:left; width:100%">
-          <div style="float:left; width:40%">
-            <h1>How to Look at and Examine the data</h1>
-            <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">The company snapshot gives you a high-level summary of the company total emissions and intensity rankings (Fig 1) and whether the company has been increasing or decreasing its intensity over the past ten years (Fig 2).</p>
-            <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">The lower the ranking, the lower total emissions or intensity. For example, in <strong>Figure 1</strong>, Accenture is in Group 3 for annual emissions. As a company with 25K+ employees, we expect their total emissions to be relatively high. To normalize our analysis by company size, we look at intensity. Because Accenture is in Group 2 for intensity, it produces relatively fewer emissions per dollar spent compared to other companies. Note that our calculations don’t include Scope 3 emissions, which would involve air travel.</p>
-            <div style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;"><strong>Figure 2</strong> shows if the change in a company’s intensity has increased or decreased in the last ten years. For example, on average, Exxon’s emission intensity has increased. However, this does not tell the whole story. Students can also explore the data for intensity.</div><br><br>
-          </div>
-            
-          <div style="float:right; width:57%">
-            <img src="./images/emissionsandintensity.png" alt="graph of emissions and intensities clusters"/>
-            <p style="list-style-type: disc; font-size: 9pt; font-family: Arial; line-height: 1.38;">Fig 1: Total emissions and intensity rankings of selected companies from the Tableau data.</p><br>
-            <img src="./images/posneg.png" alt="graph of emissions and intensities clusters"/>
-            <p style="list-style-type: disc; font-size: 9pt; font-family: Arial; line-height: 1.38;">Fig 2: Emissions intensity trend color chart for selected companies from the Tableau data.</p><br><br>
-          </div>
-        </div>
 
         <div style="float:left;width:100%;">
           <div style="float: left; width:40%">
+            <h1>How to Look at and Examine the data</h1>
             <h3>Diving into Intensity</h3>
-            <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">The next slide in Tableau shows intensity and trend data. The raw data for emissions couldn’t be shown in accordance with regulations from the CDP (formerly the Carbon Disclosure Project), a third party organization that companies can report their emissions data to.</p>
-            <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;"><strong>Figure 3</strong> shows the intensity data. Observe how Exxon’s intensity in the past four years has actually decreased, although its intensity in 2019 was still higher than in 2014. What happened in 2016? Does Exxon plan to continue decreasing its intensity? These are questions students can ask at the Career Fair!</p>
-            <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;"><strong>Figure 4</strong> shows the value of the trend. Blue values are negative, while orange values are positive. Keep in mind that although the intensity normalizes the emissions by a company’s size, it can be much easier for a company that started off with a high intensity (inefficient, many metric tons CO2 / $) to decrease its intensity vs. a company that already started off with a low intensity (efficient, few metric tons CO2 $). In other words, the marginal cost of decreasing intensity increases. Take this into account when looking at the trend values, and remember to ask companies questions!</p><br>
+            <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;"><strong>Figure 3</strong> shows the intensity data which is the companies emissions divided by their operating costs for every year. We make this calculation in order to better compare companies of all sizes to one another.</p> 
+            <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">Observe how Akamai Technologies Intensity had recently been trending upwards, but made a drastic drop in 2020. What happened in the years previous? Does Akamai plan to continue decreasing its intensity or was this in large part due to Covid? These are questions students can ask at the Career Fair!</p>
+            <br><br>
+          </div>
+          <div style="float: right; width:57%">
+            <img src="./images/intensitytrend.png" alt="intensity graph"/>
+            <p style="list-style-type: disc; font-size: 9pt; font-family: Arial; line-height: 1.38;">Fig 3: Emissions Intensity data from 2011-2020 for All Companies</p><br><br>
+          </div>
+        </div>
+
+
+        <div style="float:left;width:100%;">
+          <div style="float: left; width:40%">
+            <h3>Looking at Averages</h3>
+            <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;"><strong>Figure 4</strong> containes the same type of graph for both intensity and emissions as an average over the most recent 5 years. The raw data for emissions couldn’t be shown in accordance with regulations from the CDP (formerly the Carbon Disclosure Project), a third party organization that companies can report their emissions data to (which is part of the reason we both take a logarithm and average of the data).</p>
+            <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">The intensity average graph is best used to compare companies of all sizes. If you want to compare just the emissions without operating costs baked in then look at the second graph. Remember that this is a log graph so even though companies may seem close together, their data is likely different orders of magnitude; which is why we used a k-means clustering algorithm on the data to better elucidate the different levels of emissions/intensity that companies operate at. These are color-coded for your convenience.</p>
           </div>
 
           <div style="float: right; width:57%">
-            <img src="./images/intensity.png" alt="intensity graph"/>
-            <p style="list-style-type: disc; font-size: 9pt; font-family: Arial; line-height: 1.38;">Fig 3: Emissions intensity data from 2011-2019 for Exxon and Advanced Micro Devices.</p><br>
-            <img src="./images/avgintensity.png" alt="intensity graph"/>
-            <p style="list-style-type: disc; font-size: 9pt; font-family: Arial; line-height: 1.38;">Fig 4: The average change in emissiosn intensity from 2011 to 2019.</p><br>
+            <img src="./images/emissionsandintensity.png" alt="intensity graph"/>
+            <p style="list-style-type: disc; font-size: 9pt; font-family: Arial; line-height: 1.38;">Fig 4: The Avg. Change in Intensity and Raw Emissions for 2011-2020</p><br>
           </div>
         </div>
 
   
-      <!-- Add icon library -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <br><br><hr><br>
-      <footer role="contentinfo" class="add-gutter" style="width:90%">
-        <div style="width: 100%; float:left;">
-          <a target = "_blank" href = "https://environmentalsolutions.mit.edu/"><img src="./images/esi.png" alt="" style="width: 31%;"/></a>
-          <a target = "_blank" href = "https://mitsloan.mit.edu/sustainability-initiative/welcome"><img src="./images/sloan.png" alt="" style="width: 31%;"/></a>
-          <a target = "_blank" href = "https://capd.mit.edu/career-advising-professional-development"><img src="./images/capd.png" alt="" style="width: 31%;"/></a>
-          <a target = "_blank" href = "https://github.com/cf-sustainability-mit/cf-sustainability-mit.github.io"><img src="./images/github.png" alt="" style="width: 5%;"/></a>
-        </div>
-        <p style="color: transparent;">space</p>
-        <div style="width:100%; float:left">
-          <p style="float: left;">Massachusetts Institute of Technology<br/>Cambridge MA 02139-4307<br/><a href="https://accessibility.mit.edu" target="_blank">Accessibility</a></p>
-          <p style="float: right">Email: <strong>cf-sustainability@mit.edu</strong></p>  
-        </div>
-      </footer>
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <br><br><hr><br>
+        <footer role="contentinfo" class="add-gutter" style="width:90%">
+          <div style="width: 100%; float:left;">
+            <a target = "_blank" href = "https://environmentalsolutions.mit.edu/"><img src="./images/esi.png" alt="" style="width: 31%;"/></a>
+            <a target = "_blank" href = "https://mitsloan.mit.edu/sustainability-initiative/welcome"><img src="./images/sloan.png" alt="" style="width: 31%;"/></a>
+            <a target = "_blank" href = "https://capd.mit.edu/career-advising-professional-development"><img src="./images/capd.png" alt="" style="width: 31%;"/></a>
+            <a target = "_blank" href = "https://github.com/cf-sustainability-mit/cf-sustainability-mit.github.io"><img src="./images/github.png" alt="" style="width: 5%;"/></a>
+          </div>
+          <p style="color: transparent;">space</p>
+          <div style="width:100%; float:left">
+            <p style="float: left;">Massachusetts Institute of Technology<br/>Cambridge MA 02139-4307<br/><a href="https://accessibility.mit.edu" target="_blank">Accessibility</a></p>
+            <p style="float: right">Email: <strong>cf-sustainability@mit.edu</strong></p>  
+          </div>
+        </footer>
     </div>
   </body>
 </html>
