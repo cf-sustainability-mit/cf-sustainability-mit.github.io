@@ -6,6 +6,8 @@
   <!-- START: Styles -->
   <link rel="shortcut icon" type="image/x-icon" href="./images/logo.png" />
   <link rel="stylesheet" href="assets/main.css"/> 
+  <link href="progress-nav/normalize.css" rel="stylesheet" type="text/css" />
+  <link href="progress-nav/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 
@@ -38,62 +40,91 @@
     
     <div class="columns-inner clearfix add-gutter">
       
+      <div class="wrapper">
+        <div class = "content">
+          <h1 id="page-title">Methodology</h1>
+          <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">We evaluated companies' commitment towards sustainability using three metrics: annual emissions, intensity, and trend. Then, we sorted companies into six groups based on their performance levels in these metrics.</p>
 
-      <h1 id="page-title">Methodology</h1>
-      <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">We evaluated companies' commitment towards sustainability using three metrics: annual emissions, intensity, and trend. Then, we sorted companies into six groups based on their performance levels in these metrics.</p>
+          <div id ="1">
+            <h3>Emissions & Intensity</h3>
+            <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;"><strong>Total Emissions (metric tons CO2):</strong> Direct emissions from owned or controlled sources (Scope 1) and indirect emissions from the generation of purchased energy (Scope 2). All other indirect emissions (Scope 3) were not included in our analysis because Scope 3 emissions vary widely and are more difficult to classify, report, and account. For example, the emissions data of consulting firms does not include air travel. Due to restrictions from the CDP, we could not release the raw emissions data.</p>
+            <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;"><strong>Intensity (metric tons CO2 produced / $ billlion spent):</strong> The amount of carbon emissions per each good and service provided. We calculated intensity by dividing total emissions by refined operating costs. Refined operating costs are directly related to the company's day-to-day maintenance, such as research and development, administrative needs, and production costs. Other costs, such as investments in other goods and industries, were not included. This data was taken from publicly available company annual reports.</p>
+          </div>
 
-      <h3>Emissions, intensity, and trend</h3>
-      <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;"><strong>Total Emissions (metric tons CO2):</strong> Direct emissions from owned or controlled sources (Scope 1) and indirect emissions from the generation of purchased energy (Scope 2). All other indirect emissions (Scope 3) were not included in our analysis because Scope 3 emissions vary widely and are more difficult to classify, report, and account. For example, the emissions data of consulting firms does not include air travel. Due to restrictions from the CDP, we could not release the raw emissions data.</p>
-      <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;"><strong>Intensity (metric tons CO2 produced / $ billlion spent):</strong> The amount of carbon emissions per each good and service provided. We calculated intensity by dividing total emissions by refined operating costs. Refined operating costs are directly related to the company's day-to-day maintenance, such as research and development, administrative needs, and production costs. Other costs, such as investments in other goods and industries, were not included. This data was taken from publicly available company annual reports.</p>
-      <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;"><strong>Emissions intensity trend (metric tons CO2 produced / $ billlion spent / yr):</strong> The slope of the line of best fit of the company's intensity for the past ten years. A positive trend indicates increasing intensity, while a negative trend indicates decreasing intensity (decreasing is what we want to see!!!).</p>
+          <div id ="2">
+            <h3>Which Companies Are in the Dataset</h3>
+            <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">Only companies with public emissions and financial data are included in the dataset. Emissions data was provided from the CDP (formerly the Carbon Disclosure Project), a third-party organization that companies report their emissions to. If we could not access company data from the CDP, we retrieved emissions data from the company sustainability report. Financial data was retrieved from company annual reports.</p>
+            <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">Our dataset not only includes companies registered for this year’s Career Fair, but also a selection of companies from past Career Fairs. This is because we wanted our dataset to be representative of companies that would normally appear at Fall Career Fair, despite the Covid-19 disruption this year.</p>
+            <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">To view the list of companies registered for the Career Fair excluded from our dataset, <a href="https://docs.google.com/spreadsheets/d/1rlOS_6i9O1DbjK-oQxgbEOlcxyV3Ma0W0vNJXmEad6A/edit?usp=sharing" style="text-decoration-line: none;">click here</a>. These companies lack transparency in emissions data, financial data, both emissions and financial data, or are excused. Excused companies include smaller firms (&lt;100 employees) and start-ups (founded 2015 or earlier).</p><br>
+          </div>
 
-      <h3>Which Companies Are in the Dataset</h3>
-      <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">Only companies with public emissions and financial data are included in the dataset. Emissions data was provided from the CDP (formerly the Carbon Disclosure Project), a third-party organization that companies report their emissions to. If we could not access company data from the CDP, we retrieved emissions data from the company sustainability report. Financial data was retrieved from company annual reports.</p>
-      <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">Our dataset not only includes companies registered for this year’s Career Fair, but also a selection of companies from past Career Fairs. This is because we wanted our dataset to be representative of companies that would normally appear at Fall Career Fair, despite the Covid-19 disruption this year.</p>
-      <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">To view the list of companies registered for the Career Fair excluded from our dataset, <a href="https://docs.google.com/spreadsheets/d/1rlOS_6i9O1DbjK-oQxgbEOlcxyV3Ma0W0vNJXmEad6A/edit?usp=sharing" style="text-decoration-line: none;">click here</a>. These companies lack transparency in emissions data, financial data, both emissions and financial data, or are excused. Excused companies include smaller firms (&lt;100 employees) and start-ups (founded 2015 or earlier).</p><br>
+          <div id ="3">
+            <div style="float:left; width:100%">
+              <div style="width:40%; float:left;">
+                <h3>Grouping Companies Based on Total Emissions and Intensities</h3>
+                <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">We ran a k-means clustering algorithm to sort the companies into different groups based on performance in log(emissions) and log(intensity). We used a log factor because the range of values was too large to create effective groups, due to a few outliers. See Fig 1 for the average emissions and intensities in each cluster before the log operation.</p>
+                <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">For total emissions, the optimal number of groups was seven. However, to be consistent with the optimal number of groups for intensity, we combined groups seven (which only had two companies) and six for total emissions.</p><br>
+              </div>
 
-      <div style="float:left; width:100%">
-        <div style="width:40%; float:left;">
-          <h3>Grouping Companies Based on Total Emissions and Intensities</h3>
-          <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">We ran a k-means clustering algorithm to sort the companies into different groups based on performance in log(emissions) and log(intensity). We used a log factor because the range of values was too large to create effective groups, due to a few outliers. See Fig 1 for the average emissions and intensities in each cluster before the log operation.</p>
-          <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">For total emissions, the optimal number of groups was seven. However, to be consistent with the optimal number of groups for intensity, we combined groups seven (which only had two companies) and six for total emissions.</p><br>
+              <div style="width:57%; float:right;">
+                <image src="./images/clusters.png" alt="companies sorted by carbon emissions"/>
+                <p style="list-style-type: disc; font-size: 9pt; font-family: Arial; line-height: 1.38;">Fig 1: The average emissions from 2018 - 2019 (left) and emissions intensity 2015 - 2019 (right) per cluster.</p><br>
+              </div>
+            </div>
+          </div>
+
+          <div id ="4">
+            <div id = "5" style="float:left;width:100%;">
+              <div style="float: left; width:40%">
+                <h1>How to Analyze the Data</h1>
+                <h3>Diving into Intensity</h3>
+                <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;"><strong>Figure 3</strong> shows the intensity data which is the companies emissions divided by their operating costs for every year. We make this calculation in order to better compare companies of all sizes to one another.</p> 
+                <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">Observe how Akamai Technologies Intensity had recently been trending upwards, but made a drastic drop in 2020. What happened in the years previous? Does Akamai plan to continue decreasing its intensity or was this in large part due to Covid? These are questions students can ask at the Career Fair!</p>
+                <br><br>
+              </div>
+              <div style="float: right; width:57%">
+                <img src="./images/intensitytrend.png" alt="intensity graph"/>
+                <p style="list-style-type: disc; font-size: 9pt; font-family: Arial; line-height: 1.38;">Fig 3: Emissions Intensity data from 2011-2020 for All Companies</p><br><br>
+              </div>
+            </div>
+          
+
+            <div id ="6" style="float:left;width:100%;">
+              <div style="float: left; width:40%">
+                <h3>Looking at Averages</h3>
+                <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;"><strong>Figure 4</strong> containes the same type of graph for both intensity and emissions as an average over the most recent 5 years. The raw data for emissions couldn’t be shown in accordance with regulations from the CDP (formerly the Carbon Disclosure Project), a third party organization that companies can report their emissions data to (which is part of the reason we both take a logarithm and average of the data).</p>
+                <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">The intensity average graph is best used to compare companies of all sizes. If you want to compare just the emissions without operating costs baked in then look at the second graph. Remember that this is a log graph so even though companies may seem close together, their data is likely different orders of magnitude; which is why we used a k-means clustering algorithm on the data to better elucidate the different levels of emissions/intensity that companies operate at. These are color-coded for your convenience.</p>
+              </div>
+
+              <div style="float: right; width:57%">
+                <img src="./images/emissionsandintensity.png" alt="intensity graph"/>
+                <p style="list-style-type: disc; font-size: 9pt; font-family: Arial; line-height: 1.38;">Fig 4: The Avg. Change in Intensity and Raw Emissions for 2011-2020</p><br>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end of content -->
+
+        <div class="sidebar">
+          <nav class="toc" id="toc">
+          <div id="tocheader">
+          <ul>
+            <li><a href="#1">Emissions & Intensity</a></li>
+            <li><a href="#2">Companies</a></li>
+            <li><a href="#3">Grouping Companies</a></li>
+            <li><a href="#4">How to Analyze the Data</a>
+              <ul>
+                <li><a href="#5">Diving Into Intensity</a></li>
+                <li><a href="#6">Looking at Averages</a></li>
+              </ul>
+            </li>
+          </ul>
+          <svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path stroke="#444" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
+          </svg>
+          </div>
+          </nav>
         </div>
-
-        <div style="width:57%; float:right;">
-          <image src="./images/clusters.png" alt="companies sorted by carbon emissions"/>
-          <p style="list-style-type: disc; font-size: 9pt; font-family: Arial; line-height: 1.38;">Fig 1: The average emissions from 2018 - 2019 (left) and emissions intensity 2015 - 2019 (right) per cluster.</p><br>
-        </div>
-      </div>
-
-
-      <div style="float:left;width:100%;">
-        <div style="float: left; width:40%">
-          <h1>How to Look at and Examine the data</h1>
-          <h3>Diving into Intensity</h3>
-          <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;"><strong>Figure 3</strong> shows the intensity data which is the companies emissions divided by their operating costs for every year. We make this calculation in order to better compare companies of all sizes to one another.</p> 
-          <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">Observe how Akamai Technologies Intensity had recently been trending upwards, but made a drastic drop in 2020. What happened in the years previous? Does Akamai plan to continue decreasing its intensity or was this in large part due to Covid? These are questions students can ask at the Career Fair!</p>
-          <br><br>
-        </div>
-        <div style="float: right; width:57%">
-          <img src="./images/intensitytrend.png" alt="intensity graph"/>
-          <p style="list-style-type: disc; font-size: 9pt; font-family: Arial; line-height: 1.38;">Fig 3: Emissions Intensity data from 2011-2020 for All Companies</p><br><br>
-        </div>
-      </div>
-
-
-      <div style="float:left;width:100%;">
-        <div style="float: left; width:40%">
-          <h3>Looking at Averages</h3>
-          <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;"><strong>Figure 4</strong> containes the same type of graph for both intensity and emissions as an average over the most recent 5 years. The raw data for emissions couldn’t be shown in accordance with regulations from the CDP (formerly the Carbon Disclosure Project), a third party organization that companies can report their emissions data to (which is part of the reason we both take a logarithm and average of the data).</p>
-          <p style="list-style-type: disc; font-size: 11pt; font-family: Arial; line-height: 1.38;">The intensity average graph is best used to compare companies of all sizes. If you want to compare just the emissions without operating costs baked in then look at the second graph. Remember that this is a log graph so even though companies may seem close together, their data is likely different orders of magnitude; which is why we used a k-means clustering algorithm on the data to better elucidate the different levels of emissions/intensity that companies operate at. These are color-coded for your convenience.</p>
-        </div>
-
-        <div style="float: right; width:57%">
-          <img src="./images/emissionsandintensity.png" alt="intensity graph"/>
-          <p style="list-style-type: disc; font-size: 9pt; font-family: Arial; line-height: 1.38;">Fig 4: The Avg. Change in Intensity and Raw Emissions for 2011-2020</p><br>
-        </div>
-      </div>
-
+      </div> <!-- end of wrapper -->
   
       <!-- Add icon library -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -111,6 +142,7 @@
           <p style="float: right">Email: <strong>cf-sustainability@mit.edu</strong></p>  
         </div>
       </footer>
+      <script src="progress-nav/script.js"></script>
     </div>
   </body>
 </html>

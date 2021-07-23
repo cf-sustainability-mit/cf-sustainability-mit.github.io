@@ -1,23 +1,39 @@
-* {
-  box-sizing: border-box; }
+/** {
+  box-sizing: border-box; }*/
 
-/*body {
-  width: 100vw;
-  height: 100vh;
-  overflow: auto; }*/
+.sidebar {
+  width: 20%;
+  height: 50vh; // experiment with this value, try changing to 110vh
+  min-height: 200px;
+  overflow: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5%;
+  float:  right;
+}
 
-body {
-  /*padding: 1em 2em 2em 17em;*/
-  font-size: 16px;
-  line-height: 1.6;
-  font-family: 'Roboto', sans-serif; }
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  width: 79%;
+  /*height: 200vh;*/
+  min-height: 1000px;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  float:  left;
+}
+
+
 
 .toc {
-  position: fixed;
+  /*position: fixed;*/
   right: 3em;
   top: 15em;
   padding: 1em;
-  width: 14em;
+  /*width: 14em;*/
   line-height: 2; 
   z-index: 9;
   background-color: #04AA6D;
