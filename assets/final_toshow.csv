@@ -1,106 +1,116 @@
 ,Company,Industry,Cluster Total Emissions Based on 2016-2020 LOG(AVG),2016-2020 AVG CO2 Emissions Intensity (emissions) / ($B operating costs),LOG(2016-2020 AVG CO2 Emissions Intensity (emissions) / ($B operating costs)),Cluster Emissions Intensity Based on 2016-2020 LOG(AVG)
-0,3M,Industrials,5,218106.18677186425,5.338667984894488,6
-1,Accenture,Information technology,4,9291.903380136406,3.96810468523369,4
-2,"ADP, inc",Information technology,4,14558.521003900993,4.1631172573623205,4
-3,advanced micro devices,Information technology,3,18024.06536304168,4.255852753657899,4
-4,aetna (missing emissions and financial data),Health Care,1,0.0,,#NUM!
-5,Ahold Delhaize (2017-2020),Consumer Staples,5,53383.704483120266,4.727408707719655,5
-6,akamai technologies,Information technology,4,62677.06135287509,4.797108626147722,5
-7,amgen,Health Care,4,24748.2107708427,4.3935438060801495,4
-8,analog devices,Information technology,4,55957.43657266314,4.747857811112023,5
-9,apple,Information technology,3,386.4744463235314,2.5871207836681385,3
-10,applied materials,Information technology,4,16538.94328234646,4.21850775785821,4
-11,aptiv,Consumer Discretionary,4,39293.16182642538,4.594316976852534,5
-12,asml (2017-2020),Information technology,4,13007.801663064522,4.11420390637935,4
-13,at&t,Communication Services,6,63202.30504616522,4.800732917690216,5
-14,ati (2017-2019),Education,4,189400.52851337448,5.277381186547518,6
-15,atos se,Information technology,3,9039.814298676303,3.956159509027517,4
-16,avangrid,Energy,5,445049.3139799273,5.648408135930974,6
-17,bae systems,Industrials,5,52113.24337139728,4.716948103189154,5
-18,Biogen,Health Care,3,16961.216349971644,4.229456993860483,4
-19,bloomberg lp (emissions data 2018-2020 and missing financial data),Financials,3,0.0,,#NUM!
-20,Boeing,Industrials,5,18590.539896571507,4.269292002504392,4
-21,Booz Allen Hamilton (2018-2019),Consulting,3,2761.960624366592,3.44121748280807,3
-22,bose (missing financial data),Information technology,3,0.0,,#NUM!
-23,Boston Consulting Group (2018-2019 emissions and missing financials),Information technology,4,0.0,,#NUM!
-24,Boston Scientific Corporation (2016-2017 and 2019-2020),Health Care,3,14230.953640685912,4.15323400387982,4
-25,Captial One,Financials,4,10314.589866486504,4.01345196403356,4
-26,chevron corporation,Energy,#NUM!,0.6534062100028802,-0.1848167422860981,2
-27,cisco,Information technology,4,19929.735140338693,4.299501527107226,4
-28,clarion,Consumer Discretionary,#NUM!,0.0,,#NUM!
-29,corning incorporated,Information technology,5,209706.06517196557,5.321610991422065,6
-30,cummins,Industrials,5,44818.999416143735,4.651462156685922,5
-31,cypress semiconductor (missing financial data),Information technology,4,0.1388708213491875,-0.8573889958623646,2
-32,daimler ag,Consumer Discretionary,5,17647.711752383108,4.246688401636699,4
-33,Danfoss (2016-2019),Industrials,4,58468.33093318643,4.766920696422316,5
-34,dassault systemes,Information technology,3,8464.83385101669,3.927618438133698,4
-35,Department of Commerce,Government Departments,1,0.0424876224700942,-1.3717375705581172,1
-36,Department of Defense,Government Departments,2,0.0382143235072089,-1.4177738241514053,1
-37,Department of Energy,Government Departments,2,0.0426589033674189,-1.3699903131528863,1
-38,Department of State,Government Departments,1,0.0019470142825711,-2.71063086264582,1
-39,Department of Transportation,Government Departments,2,0.0054650382766379,-2.2624067919440227,1
-40,eli lilly and company (financial data),Health Care,5,0.7371395387317051,-0.1324502934638422,2
-41,Exelon Coporation,Utilities,6,975609.6334927516,5.989276080030467,6
-42,Exxon,Energy,6,582295.8678730063,5.765143708249329,6
-43,facebook,Communication Services,4,16845.725005946042,4.226489706875822,4
-44,Ford,Consumer Discretionary,5,30696.25954817644,4.487085458325531,5
-45,gd mission systems (missing emissions data for 2020 - average 2016-2019),Industrials,4,6957.8633389514725,3.8424758944141386,4
-46,general electric,Industrials,5,30552.411657329438,4.48504549700516,5
-47,general motors,Consumer Discretionary,6,49296.84113449169,4.692819091248583,5
-48,GlaxoSmithKline,Health Care,5,45840.57963089716,4.661250100427673,5
-49,Global Foundries (2016-2019 emissions data – missing financials),Information technology,4,0.0,,#NUM!
-50,Google (ALPHABET),Communication Services,5,36087.9885233584,4.557362675976073,5
-51,Harvard,Social Sector,4,41879.031869488135,4.621996633403201,5
-52,home depot,Consumer Discretionary,5,24142.88845884619,4.382789227927623,4
-53,ibm,Information technology,5,21761.60073922165,4.33769083802255,4
-54,infosys limited,Information technology,4,2941.5935642441755,3.4685826666920887,3
-55,Intel Corporation,Information technology,5,118418.91651422335,5.073421083143155,5
-56,Johns Hopkins University (2019-2020),Education,4,41633.62242995502,4.6194441993301725,5
-57,Johnson & Johnson Family of Companies,Consumer Discretionary,5,19276.408414862344,4.285026119249944,4
-58,Kensho Technologies (S&P Global),Information Technology,3,11372.274805818626,4.055847345672698,4
-59,L'Oreal,Consumer Discretionary,4,8651.130179121186,3.937072847175054,4
-60,L3Harris (2018-2020),Information technology,4,25435.00313571081,4.405431795508628,4
-61,leidos,Information technology,3,7983.987277939738,3.902219836254644,4
-62,lenovo,Information technology,4,4486.816327214173,3.65193829157229,3
-63,lockheed martin,Industrials,5,12677.637514923146,4.103038330057883,4
-64,Lyft,Consumer Discretionary,#NUM!,0.0,,#NUM!
-65,magna international,Industrials,5,59161.34722747506,4.772038055230135,5
-66,Mastercard,Financials,3,11103.600686827054,4.045463835078915,4
-67,maxim integrated,Information technology,3,66403.44546691139,4.822190614133772,5
-68,mckinsey & company (missing financials and emissions data 2017-2020),Financials,3,0.0,,#NUM!
-69,merck,Health Care,5,52010.943489037694,4.716094732036057,5
-70,microsoft,Information technology,5,66710.6509580958,4.8241951784899335,5
-71,milwaukee tool,Industrials,3,8979.009654541263,3.9532284385285297,4
-72,MIT,Social Sector,4,53538.93031149722,4.728669689890605,5
-73,nasa,Government Departments,2,0.0419399132929974,-1.3773724717345683,1
-74,nasdaq,Financials,1,0.0,,#NUM!
-75,nordstrom,Consumer Discretionary,4,18913.067858284663,4.276761980767777,4
-76,northrop grumman corporation,Industrials,4,23127.367998212045,4.364126210855644,4
-77,nvidia,Information technology,3,16723.396628445153,4.223324490039349,4
-78,oracle,Information technology,4,15515.522990772875,4.190766419184037,4
-79,Procter & Gamble,Materials,5,88468.1879045509,4.946787131701051,5
-80,raytheon,Industrials,4,19594.02439309193,4.292123644377288,4
-81,regal beloit (2017-2020),Industrials,4,147824.05693714638,5.169745117041684,5
-82,Rio Tinto,Materials,6,1007835.1050824928,6.003389481701915,6
-83,saint-gobain,Industrials,6,278617.78875115846,5.445008841125412,6
-84,salesforce,Information technology,4,21054.382750695026,4.323342513773547,4
-85,samsung,Information technology,6,76317.36319220586,4.882623356836796,5
-86,schlumberger (2016-2019),Energy,5,61110.46032387558,4.786115555121661,5
-87,ses (2016-2019),Communication Services,3,37709.219210586896,4.57644754020079,5
-88,shell oil company,Energy,6,345258.32087723503,5.538144154064634,6
-89,Siemens,Industrials,5,22721.42546360846,4.356435574026645,4
-90,sigma alimentos,Health Care,2,0.0,,#NUM!
-91,Sony Corporation,Information technology,5,20089.188182206737,4.302962386966687,4
-92,stmicroelectronics,Information technology,5,167995.13360667354,5.225296701497418,6
-93,Taiwan Semiconductor (2016-2019),Materials,6,2352752.409704252,6.371576226896893,6
-94,Texas Instruments,Information technology,5,258590.603561998,5.41261273982003,6
-95,The Port Authority of NY & NJ,Industrials,5,1630647.116590946,6.212359986853353,6
-96,united technologies corporation (merged with Raytheon in 2020),Industrials,2,0.0334656954050851,-1.4754001460839596,1
-97,UnitedHealth Group,Health Care,4,952.7127309380206,2.978961968659588,3
-98,university of california berkeley (missing emissions and financials),Social Sector,1,0.0319352496839272,-1.4957296839860994,1
-99,Veoneer (2019-2020 data),Consumer Discretionary,3,12504.782045577238,4.097076126516099,4
-100,Visa,Financials,3,14336.809716853752,4.15645252117065,4
-101,Walmart,Consumer Staples,6,41792.85057002913,4.621101994130302,5
-102,Xilinx,Materials,3,14856.269069278744,4.171909756526338,4
-103,XPO Logistics (2018-2020),Consulting,5,116442.58137029735,5.066111824578947,5
-104,Xylem,Utilities,3,20391.969243583186,4.309459167432172,4
+0,3M,Industrials,5,218106.18677186425,5.338667984894488,5
+1,Accenture,Information technology,3,9291.903380136406,3.96810468523369,2
+2,"ADP, inc",Information technology,2,14558.521003900993,4.1631172573623205,3
+3,advanced micro devices,Information technology,2,18024.06536304168,4.255852753657899,3
+4,"aetna (2018 emisisons data, missing financial data)",Health Care,2,,,#NUM!
+5,Ahold Delhaize (2017-2020),"Consumer Staples (Food, etc.)",5,53383.704483120266,4.727408707719655,4
+6,akamai technologies,Information technology,2,62677.06135287509,4.797108626147722,4
+7,amgen,Health Care,3,24748.2107708427,4.3935438060801495,3
+8,analog devices,Information technology,2,55957.43657266314,4.747857811112023,4
+9,apple,Information technology,2,386.4744463235314,2.5871207836681385,1
+10,applied materials,Information technology,2,16538.94328234646,4.21850775785821,3
+11,aptiv,Consumer Discretionary,3,39293.16182642538,4.594316976852534,4
+12,asml (2017-2020),Information technology,2,13007.801663064522,4.11420390637935,2
+13,at&t,Communication Services,5,63202.30504616522,4.800732917690216,4
+14,ati (2017-2019),Education,3,189400.52851337448,5.277381186547518,5
+15,atos se,Information technology,2,9039.814298676303,3.956159509027517,2
+16,avangrid,Energy,4,445049.3139799273,5.648408135930974,5
+17,bae systems,Industrials,4,52113.24337139728,4.716948103189154,4
+18,Biogen,Health Care,2,16961.216349971644,4.229456993860483,3
+19,bloomberg lp (emissions data 2018-2020 and missing financial data),Financials,2,,,#NUM!
+20,Boeing,Industrials,4,18590.539896571507,4.269292002504392,3
+21,Booz Allen Hamilton (2018-2019),Consulting,1,2761.960624366592,3.44121748280807,1
+22,bose (missing financial data),Information technology,1,,,#NUM!
+23,Boston Consulting Group (2018-2019 emissions and missing financials),Information technology,3,,,#NUM!
+24,Boston Scientific Corporation (2016-2017 and 2019-2020),Health Care,2,14230.953640685912,4.15323400387982,3
+25,Captial One,Financials,2,10314.589866486504,4.01345196403356,2
+26,Cargill (No financial data),,5,,,#NUM!
+27,chevron corporation,Energy,#NUM!,,,#NUM!
+28,cisco,Information technology,3,19929.735140338693,4.299501527107226,3
+29,clarion,Consumer Discretionary,#NUM!,,,#NUM!
+30,corning incorporated,Information technology,4,209706.06517196557,5.321610991422065,5
+31,cummins,Industrials,3,44818.999416143735,4.651462156685922,4
+32,cypress semiconductor (missing financial data),Information technology,3,,,#NUM!
+33,daimler ag,Consumer Discretionary,4,17647.711752383108,4.246688401636699,3
+34,Danfoss,Industrials,2,54587.2359184596,4.737091103909324,4
+35,dassault systemes,Information technology,1,8464.83385101669,3.927618438133698,2
+36,Department of Commerce (2016-2019),Government Departments,3,39994.58018035805,4.6020011423969045,4
+37,Department of Defense (2016-2019),Government Departments,6,36555.48638963437,4.562952566791328,4
+38,Department of Energy (2016-2019),Government Departments,4,42182.49651642164,4.625132279320516,4
+39,Department of State (2016-2019),Government Departments,1,1810.767853213939,3.2578627758079044,1
+40,Department of Transportation (2016-2019),Government Departments,3,5187.088824257073,3.714923684961855,2
+41,Dow Chemical co (2018-2020),,6,866390.418583442,5.93771364077868,6
+42,eli lilly and company,Health Care,4,76796.46601831049,4.885341235343232,4
+43,Exelon Coporation,Utilities,5,975609.6334927516,5.989276080030467,6
+44,Exxon,Energy,6,582295.8678730063,5.765143708249329,6
+45,facebook,Communication Services,3,16845.725005946042,4.226489706875822,3
+46,Ford,Consumer Discretionary,5,30696.25954817644,4.487085458325531,3
+47,gd mission systems (2016-2019),Industrials,2,6957.8633389514725,3.8424758944141386,2
+48,general electric,Industrials,5,30552.411657329438,4.48504549700516,3
+49,general motors,Consumer Discretionary,5,49296.84113449169,4.692819091248583,4
+50,GlaxoSmithKline,Health Care,4,45840.57963089716,4.661250100427673,4
+51,"Global Foundries (2016-2019), missing financials)",Information technology,3,,,#NUM!
+52,Google (ALPHABET),Communication Services,5,36087.9885233584,4.557362675976073,4
+53,Harvard,Social Sector,2,41879.031869488135,4.621996633403201,4
+54,Hochtief,,4,125880.35282421492,5.099957951506791,5
+55,home depot,Consumer Discretionary,4,24142.88845884619,4.382789227927623,3
+56,ibm,Information technology,4,21761.60073922165,4.33769083802255,3
+57,Illumina (2017-2020 emissions) (2019-2020 financials),,1,23943.614390612514,4.379189709621574,3
+58,Inditex,,3,26739.250648345933,4.427149232251005,3
+59,infosys limited,Information technology,2,2941.5935642441755,3.4685826666920887,1
+60,Intel Corporation,Information technology,5,118418.91651422335,5.073421083143155,5
+61,Johns Hopkins University (2019-2020),Education,3,41633.62242995502,4.6194441993301725,4
+62,Johnson & Johnson Family of Companies,Consumer Discretionary,4,19276.408414862344,4.285026119249944,3
+63,Kensho Technologies (S&P Global),Information technology,1,11372.274805818626,4.055847345672698,2
+64,L'Oreal,Consumer Discretionary,2,8651.130179121186,3.937072847175054,2
+65,L3Harris (2018-2020),Information technology,2,25435.00313571081,4.405431795508628,3
+66,LafareHolcim,,6,6255301.44484861,6.796248243314788,6
+67,leidos,Information technology,2,7983.987277939738,3.902219836254644,2
+68,lenovo,Information technology,2,4486.816327214173,3.65193829157229,2
+69,lockheed martin,Industrials,3,12677.637514923146,4.103038330057883,2
+70,Lyft (2018 and 2020),Consumer Discretionary,1,2855.0789766586986,3.455618126120459,1
+71,magna international,Industrials,4,59161.34722747506,4.772038055230135,4
+72,Mastercard,Financials,2,11103.600686827054,4.045463835078915,2
+73,Mathworks (no data),,#NUM!,,,#NUM!
+74,Maxim Integrated,Information technology,2,66403.44546691139,4.822190614133772,4
+75,mckinsey & company (2017-2020) (missing financials),Financials,1,,,#NUM!
+76,merck,Health Care,4,52010.943489037694,4.716094732036057,4
+77,microsoft,Information technology,4,66710.6509580958,4.8241951784899335,4
+78,milwaukee tool,Industrials,1,8979.009654541263,3.9532284385285297,2
+79,MIT,Social Sector,2,53538.93031149722,4.728669689890605,4
+80,NASA (2016-2019),Government Departments,3,40672.20893867906,4.609297759909572,4
+81,nasdaq (2019-2020),Financials,1,27199.537750385207,4.434561523366448,3
+82,nordstrom,Consumer Discretionary,3,18913.067858284663,4.276761980767777,3
+83,northrop grumman corporation,Industrials,3,23127.367998212045,4.364126210855644,3
+84,nvidia,Information technology,1,16723.396628445153,4.223324490039349,3
+85,oracle,Information technology,3,15515.522990772875,4.190766419184037,3
+86,Pepsico,,5,89862.30242879015,4.953577541781026,4
+87,Procter & Gamble,Materials,5,88468.1879045509,4.946787131701051,4
+88,Raytheon,Industrials,3,19594.02439309193,4.292123644377288,3
+89,"Rand-Whitney, Kraft Group (no data)",,#NUM!,,,#NUM!
+90,regal beloit (2017-2020),Industrials,3,147824.05693714638,5.169745117041684,5
+91,Rio Tinto,Materials,6,1007835.1050824928,6.003389481701915,6
+92,saint-gobain,Industrials,5,278617.78875115846,5.445008841125412,5
+93,salesforce,Information technology,2,21054.382750695026,4.323342513773547,3
+94,samsung,Information technology,5,76317.36319220586,4.882623356836796,4
+95,schlumberger (2016-2019),Energy,4,61110.46032387558,4.786115555121661,4
+96,ses (2016-2019),Communication Services,1,37709.219210586896,4.57644754020079,4
+97,shell oil company,Energy,6,345258.32087723503,5.538144154064634,5
+98,Siemens,Industrials,4,22721.42546360846,4.356435574026645,3
+99,sigma alimentos (2017-2018),Health Care,3,85384.40567954723,4.931378559848961,4
+100,Sony Corporation,Information technology,4,20089.188182206737,4.302962386966687,3
+101,stmicroelectronics,Information technology,4,167995.13360667354,5.225296701497418,5
+102,Taiwan Semiconductor,Materials,5,2279435.8348606257,6.3578273715069775,6
+103,Texas Instruments,Information technology,4,258590.603561998,5.41261273982003,5
+104,The Port Authority of NY & NJ (2016-2019),Industrials,5,1630647.116590946,6.212359986853353,6
+105,united technologies corporation (2016-2019),Industrials,4,31680.58647610546,4.50079321272108,3
+106,UnitedHealth Group,Health Care,2,952.7127309380206,2.978961968659588,1
+107,university of california berkeley (2016-2018),Social Sector,2,30571.878805622757,4.485322129267195,3
+108,Veoneer (2019-2020),Consumer Discretionary,1,12504.782045577238,4.097076126516099,2
+109,Verizon,,5,61967.52080531606,4.792164121256847,4
+110,Visa,Financials,2,14336.809716853752,4.15645252117065,3
+111,Walmart,"Consumer Staples (Food, etc.)",6,41792.85057002913,4.621101994130302,4
+112,Xilinx,Materials,1,14856.269069278744,4.171909756526338,3
+113,XPO Logistics (2018-2020),Consulting,4,116442.58137029735,5.066111824578947,5
+114,Xylem,Utilities,2,20391.969243583186,4.309459167432172,3
