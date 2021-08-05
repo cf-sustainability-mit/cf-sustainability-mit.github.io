@@ -27,7 +27,7 @@
 }
 
 .navbar .active {
-  background-color: #04AA6D;
+  background-color: #537672;
 }
 
 .flicker:hover{
@@ -43,8 +43,13 @@
   font-size: 2em;
   display: flex;
   line-height: 1.4em;
+  text-decoration: none;
 }
 
+#title:hover {
+  text-decoration: underline;
+  color: #537672;
+} 
 
 
 
@@ -161,21 +166,21 @@ body {
 
 /* link color and behavior */
 a { 
-color: #537672; 
-text-decoration: none;
+color: #04AA6D; 
+text-decoration: underline;
 font-weight:bold;
 }
 a:visited {
-  text-decoration: none;
-  color: #537672;
+  text-decoration: underline;
+  color: #04AA6D;
 } 
 a:hover {
   text-decoration: underline;
-  color: #990033;
+  color: #04116D;
 } 
 a:active {
-  text-decoration: none;
-  color:#903;
+  text-decoration: underline;
+  color: #04AA6D;
 }   
 
 
