@@ -1,4 +1,7 @@
-# had to run these commands to maeke it work
+# First created by Chris Noga and Vivian Song in 2020
+# Last Update by Alejandro Diaz in 2021 September 14th contact at: adiaz@alum.mit.edu
+
+# had to run these commands to make it work
 
 # pip install xlrd
 # pip install openpyxl
