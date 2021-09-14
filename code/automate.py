@@ -25,7 +25,7 @@ def clean_values(values):
 	return clean_values, null_indices
 
 
-def run_clustering(values): # returns clusters for each company
+def run_clustering(values, unit): # returns clusters for each company
     """
     gets clusters of companies with values, leaves companies without values with blanks
 
@@ -65,15 +65,35 @@ def run_clustering(values): # returns clusters for each company
     # bestK = sumsquare.index(min(sumsquare))+1 # USE THIS IF YOU WANT THE OPTIMAL # OF GROUPS
     bestK = 6                                   # USE THIS IF YOU WANT AN EXACT # OF GROUPS
     clusters, centroids = kmeans1d.cluster(values, bestK)
-    
 
-    for index in range(len(clusters)): 		# make the clusters not zero-indexed
-    	clusters[index] = int(clusters[index] + 1)
+    # make a dictionary that contains all values for a cluster
+    avg_dict = {}
+    for index, cluster in enumerate(clusters):
+        if cluster in avg_dict:
+            avg_dict[cluster].append(int(10**values[index]))
+        else:
+            avg_dict[cluster] = [int(10**values[index])]
+    
+    # convert that dictionary into an average for each cluster
+    for key in avg_dict:
+        sum_ = 0
+        for val in avg_dict[key]:   # sum values (for some reason the sum function was not working)
+            sum_ += val
+        answer = sum_ /len(avg_dict[key])
+        avg_dict[key] = answer
+
+
+    for index in range(len(clusters)): 		                       # make the clusters not zero-indexed
+        ballpark = " ~" + str(int(avg_dict[clusters[index]])) + " " + unit # gets ballpark number for each group
+        clusters[index] = str(int(clusters[index] + 1)) + ballpark
 
     for index in null_indices:
     	clusters.insert(index, errorVar) 	# adds null values back in
 
     return clusters
+
+
+
 
 
 # specify paths to main excel sheets
@@ -89,7 +109,7 @@ data = pd.read_csv("raw_master.csv")
 # take emissions intensity and make clusters based off of the data
 column_name = "LOG(2016-2020 AVG CO2 Emissions Intensity (emissions) / ($B operating costs))"
 log_intensities = data.loc[:,column_name]
-cluster_numbers = run_clustering(log_intensities)
+cluster_numbers = run_clustering(log_intensities, "tons per dollar")
 cluster_column_name = "Cluster Emissions Intensity Based on 2016-2020 LOG(AVG)"
 data = data.drop(columns=cluster_column_name)
 data.insert(7, cluster_column_name, cluster_numbers, True)
@@ -97,19 +117,17 @@ data.insert(7, cluster_column_name, cluster_numbers, True)
 # take emissions and make clusters based off of the data
 column_name = "LOG(2016-2020 AVG CO2 Emissions (million metric tons))"
 log_emissions = data.loc[:,column_name]
-cluster_numbers = run_clustering(log_emissions)
+cluster_numbers = run_clustering(log_emissions, "tons")
 cluster_column_name = "Cluster Total Emissions Based on 2016-2020 LOG(AVG)"
 data = data.drop(columns=cluster_column_name)
 data.insert(4, cluster_column_name, cluster_numbers, True)
-data.to_csv('final.csv')            # make a final csv to put into Tableau
+data.to_csv('final.csv')                # make a final csv to put into Tableau
 
 data.drop(data.columns[[2, 3]], axis = 1, inplace = True)
-data.to_csv('final_toshow.csv')            # make a final csv to put into Tableau
+data.to_csv('final_toshow.csv')         # make a final csv to put into the Website
 
 
-
-
-
+# pull out data for intensities over time and condense into an excel
 xls = pd.ExcelFile(path_to_intensity_excel_sheet)
 data = pd.read_excel(xls, '2 Comparisons')
 
@@ -122,4 +140,4 @@ data.drop(columns=data.columns[0],
 data.to_csv("final_intensities.csv", index = False, header=False) # this drops the first row and does not add a column of indices
 
 
-
+print("Successful!")
