@@ -285,7 +285,7 @@ img {
 /* Create four equal columns that floats next to each other */
 .column {
   float: left;
-  width: 24%;
+  width: 33%;
 }
 
 /* Clear floats after rows */
@@ -297,13 +297,15 @@ img {
 
 /* Content */
 .content {
-  padding: 10px;
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
   .column {
-    width: 44%;
+    width: 44%; 
   }
 }
 
